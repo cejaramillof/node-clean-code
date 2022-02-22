@@ -1,4 +1,4 @@
-function teste (): string {
+function teste (): number {
   return 25
 }
 
