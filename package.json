@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "test:staged": "jest --passWithNoTests",
     "prepare": "husky install"
   },
   "keywords": [],
-  "author": "",
+  "author": "Carlos Jaramillo <cejaramillof@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^27.4.0",
