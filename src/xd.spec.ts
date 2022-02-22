@@ -1,5 +1,5 @@
 import teste from './test'
 
-test('Node is a constructor', () => {
+test('teste is a function', () => {
   expect(typeof teste).toEqual('function')
 })
