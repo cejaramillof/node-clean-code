@@ -6,6 +6,7 @@
 export default {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
+  testMatch: ['<rootDir>/src/**/*.spec.ts'],
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: 'coverage',

@@ -1,5 +1,3 @@
-function teste (): number {
+export default function teste (): number {
   return 25
 }
-
-teste()
