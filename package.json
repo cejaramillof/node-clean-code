@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "test:staged": "jest --bail --findRelatedTests --coverage",
     "prepare": "husky install"
   },
