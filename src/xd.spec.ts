@@ -1,5 +1,5 @@
-import teste from './test'
+import testxd from './test'
 
-test('teste is a function', () => {
-  expect(typeof teste).toEqual('function')
+test('testxd is a function', () => {
+  expect(typeof testxd).toEqual('function')
 })
