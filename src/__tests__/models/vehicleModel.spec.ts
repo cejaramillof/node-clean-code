@@ -1,4 +1,4 @@
-import { VehicleModel } from '../models/vehicleModel'
+import { VehicleModel } from '../../models/vehicleModel'
 
 describe('Classes', () => {
   it('Class VehicleModel', () => {
