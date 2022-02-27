@@ -1,4 +1,5 @@
 import { RegisterVehicle } from '../controllers/register-vehicle'
+import { MissingFormalParameter } from '../errors/client-error'
 
 describe.each([
   ['name', { model: 'F400', year: 2022 }],
@@ -14,8 +15,8 @@ describe.each([
     const httpResponse = sut.handle(httpRequest)
 
     expect(httpResponse.statusCode).toBe(400)
-    expect(httpResponse.body).toBeInstanceOf(Error)
-    expect(httpResponse.body).toEqual(new Error(`error in the: ${prop}`))
-    expect(httpResponse.body.message).toBe(`error in the: ${prop}`)
+    expect(httpResponse.body).toBeInstanceOf(MissingFormalParameter)
+    expect(httpResponse.body).toEqual(new MissingFormalParameter(prop))
+    expect(httpResponse.body.message).toBe(`Error in the Param: ${prop}`)
   })
 })
