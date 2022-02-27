@@ -4,13 +4,11 @@ import { InvalidArgument } from '../errors/invalid-arg'
 
 export class UrlLogin {
   public static parseUrl (url: string): URL {
-    let parsedUrl
     try {
-      parsedUrl = new URL(url)
+      return new URL(url)
     } catch (error) {
       throw new InvalidArgument('url')
     }
-    return parsedUrl
   }
 
   public static parseUrlDeprecated (url: string): UrlWithParsedQuery {
