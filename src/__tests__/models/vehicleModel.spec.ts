@@ -1,3 +1,4 @@
+import { VehicleHelper } from '../../helpers/vehicleModel.helper'
 import { VehicleModel } from '../../models/vehicleModel'
 
 describe('Classes', () => {
@@ -13,5 +14,11 @@ describe('Classes', () => {
     expect(vehicleModel.model).toEqual('F400')
     expect(vehicleModel.year).toBe(2022)
     expect(vehicleModel.price).toBe(20000)
+  })
+
+  it('VehicleHelper', () => {
+    const vehicleHelper = new VehicleHelper()
+    expect(Object.getOwnPropertyNames(vehicleHelper)).toMatchInlineSnapshot('Array []')
+    expect(vehicleHelper).toMatchInlineSnapshot('VehicleHelper {}')
   })
 })

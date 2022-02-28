@@ -14,4 +14,9 @@ export class FoodModel {
   public get price (): number {
     return this.foodHelper.price
   }
+
+  getFood (): any {
+    // return Object.assign(this, this.foodHelper)
+    return this
+  }
 }
