@@ -1,13 +1,13 @@
 import { Bird, Eagle, Penguin } from '../../models/bird.model'
 
 describe('Bird', () => {
-  it('Should Fly', () => {
+  it('Shouldnt Fly', () => {
     const eagle = new Bird({
       name: 'Bird',
       age: 30,
       origin: 'North America'
     })
-    expect(eagle.fly()).toEqual('Bird')
+    expect((eagle as any).fly).toBeUndefined()
   })
   it('Eagle should Fly', () => {
     const eagle = new Eagle({
@@ -24,7 +24,7 @@ describe('Bird', () => {
       age: 30,
       origin: 'North America'
     })
-    expect(penguin.fly()).toEqual(new Error('I cant Fly'))
+    expect((penguin as any).fly).toBeUndefined()
   })
 
   it('Penguin should Walk and Swim', () => {
