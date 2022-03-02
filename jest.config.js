@@ -3,10 +3,9 @@
  * https://jestjs.io/docs/configuration
  */
 
-export default {
+module.exports = {
   roots: ['<rootDir>/src'],
   collectCoverageFrom: ['<rootDir>/src/**/*.ts'],
-  testMatch: ['<rootDir>/src/**/*.spec.ts'],
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: 'coverage',

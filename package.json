@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest --silent --passWithNoTests",
+    "test:all": "jest",
+    "test:unit": "npm test -- -c jest.unit.config.js",
+    "test:int": "npm test -- -c jest.int.config.js",
+    "test:coverage": "npm test --coverage",
     "test:staged": "jest --bail --findRelatedTests --coverage",
     "prepare": "husky install",
     "start": "tsnd --transpile-only --respawn --ignore-watch node_modules src/main/server/server.ts",
