@@ -7,12 +7,13 @@ describe.each([
   ['year', { name: 'Ferrari', model: 'F400' }]
   // ['xd', { name: 'Ferrari', model: 'F400', year: 2022 }]
 ])('RegisterVehicle', (prop: string, body) => {
-  test('is the %s doesn\'t exist return 400', () => {
+  test('is the %s doesn\'t exist return 400', async () => {
+    const addAccountMock = { add: jest.fn() }
     // system under test
-    const sut = new RegisterVehicle()
+    const sut = new RegisterVehicle(addAccountMock)
     const httpRequest = { body }
 
-    const httpResponse = sut.handle(httpRequest)
+    const httpResponse = await sut.handle(httpRequest)
 
     expect(httpResponse.statusCode).toBe(400)
     expect(httpResponse.body).toBeInstanceOf(MissingFormalParameter)

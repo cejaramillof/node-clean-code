@@ -1,7 +1,8 @@
 import { Router } from 'express'
+import { AdapterRouter } from '../adapters/express'
+import { makeRegisterVehicleController } from '../factories/vehicle'
 
 export default (router: Router): void => {
-  router.post('/vehicle', (req, res) => {
-    res.send(200)
-  })
+  // eslint-disable-next-line @typescript-eslint/no-misused-promises
+  router.post('/vehicle', AdapterRouter(makeRegisterVehicleController()))
 }
