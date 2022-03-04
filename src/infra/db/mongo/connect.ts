@@ -2,7 +2,7 @@ import * as mongoose from 'mongoose'
 
 export default (): void => {
   void mongoose.connect(
-    (process.env.MONGO_URI as string),
+    process.env.MONGO_URI,
     {
       // useNewUrlParser: true,
       // useUnifiedTopology: true,
